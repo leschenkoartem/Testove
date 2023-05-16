@@ -33,8 +33,16 @@ struct ContentView: View {
                             }.padding(.bottom, 10)
                             Divider()
                             ScrollView {
+                                
+                                
                                 VStack(spacing: 0) {
-                                    VStack {
+                                    HStack {
+                                        Text("Big Title")
+                                            .font(.title)
+                                            .padding(.top)
+                                            .fontWeight(.medium)
+                                        Spacer()
+                                    }
                                         NavigationLink {
                                             InfoView()
                                         } label: {
@@ -48,23 +56,27 @@ struct ContentView: View {
                                         } label: {
                                             FileDock(smallText: "Some Text", type: .hard)
                                         }
+                                        
                                         Divider()
                                         
                                         NavigationLink {
                                             InfoView()
                                         } label: {
                                             FileDock(smallText: "Some Text", type: .hard)
-                                                .padding(.bottom)
+                                                
                                         }
+                                        Spacer()
                                     }
                                     .customVStack
                                     
-                                    Spacer()
-                                    
-                                }.padding(.top, 12)
-                                
                                 VStack(spacing: 0) {
-                                    VStack {
+                                    HStack {
+                                        Text("Big Title")
+                                            .font(.title)
+                                            .padding(.top)
+                                            .fontWeight(.medium)
+                                        Spacer()
+                                    }
                                         NavigationLink {
                                             InfoView()
                                         } label: {
@@ -88,11 +100,6 @@ struct ContentView: View {
                                         }
                                     }
                                     .customVStack
-                                    
-                                    Spacer()
-                                    
-                                }
-                                .padding(.bottom, 12)
                             }
                             Divider()
                         }
